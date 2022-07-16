@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LocalStorage</title>
+    <link rel="stylesheet" href="bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <nav class="navbar bg-dark">
+      <div class="container-fluid">
+        <span class="navbar-brand mb-0 h1">Local storage</span>
+      </div>
+    </nav>
+
+    <div class="container mt-3">
+      <div class="row">
+        <div class="col-lg-4">
+          <form id="form_cliente">
+            <div class="mb-3">
+              <label class="form-label" for="">Nombre</label>
+              <input class="form-control" type="text" id="inp_nombre" />
+            </div>
+            <div class="mb-3">
+              <label class="form-label" for="">Apellido</label>
+              <input class="form-control" type="text" id="inp_apellido" />
+            </div>
+            <div class="mb-3">
+              <label class="form-label" for="">DNI</label>
+              <input class="form-control" type="number" id="inp_dni" />
+            </div>
+          </form>
+
+          <button id="btn_guardar" class="btn btn-success">Guardar</button>
+          <button
+            style="display: none"
+            id="btn_actualizar"
+            class="btn btn-primary"
+          >
+            Actualizar
+          </button>
+        </div>
+
+        <div class="col-lg-8">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>DNI</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody id="tbody"></tbody>
+          </table>
+          <div id="mymodal" class="modal fade" tabindex="-1">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Eliminación</h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <p>¿Está seguro de llevar a cabo esta acción?</p>
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                  <button
+                    id="btn_eliminar"
+                    type="button"
+                    class="btn btn-danger"
+                  >
+                    Eliminar
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="bootstrap.bundle.min.js"></script>
+    <script src="index.js" type="module"></script>
+    <script src="auxiliar.js"></script>
+  </body>
+</html>
